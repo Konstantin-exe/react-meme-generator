@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function InputSection() {
-  const [memes, setMemes] = useState(['Ancient Alien Guy']);
+  const [memes, setMemes] = useState([]);
+
   // const [top, setTop] = useState('');
 
   useEffect(() => {
@@ -16,25 +17,25 @@ export default function InputSection() {
         console.log(err);
       });
   }, []);
+
   return (
     <div>
-      <select
-        onChange={(event) => {
-          setMemes(event.currentTarget.value);
-        }}
-        value={memes.key}
-      >
+      <select>
         {memes.map((meme) => (
-          <option
-            onChange={(event) => {
-              setMemes(event.currentTarget.value);
-            }}
-            value={memes}
-          >
-            {meme.name}
-          </option>
+          <option value={meme.key}>{meme.name}</option>
         ))}
       </select>
     </div>
   );
 }
+
+// function getImg(arr) {
+//   let elementArr = [];
+//   for (let element of arr) {
+//     if (element.match('<img[^>]+src\\s*=\\s*[\'"]([^\'"]+)[\'"][^>]*>')) {
+//       elementArr.push(element.split('"')[1]);
+//     }
+//   }
+//   elementArr.length = 10;
+//   return elementArr;
+// }
