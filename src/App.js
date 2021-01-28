@@ -1,6 +1,6 @@
 import './App.css';
-import Header from './components/Header';
 import InputSection from './components/InputSection';
+import ImgSection from './components/ImgSection';
 
 function App() {
   return (

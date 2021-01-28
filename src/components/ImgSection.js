@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function ImgSection() {
-  const [img, setImg] = useState([]);
+  const [imgs, setImg] = useState(['aag']);
 
   useEffect(() => {
     axios
-      .get(`https://api.memegen.link/images/${ImgSection}`)
+      .get(`https://api.memegen.link/images/`)
       .then((res) => {
         console.log(res);
         setImg(res.data);
@@ -18,7 +18,9 @@ export default function ImgSection() {
 
   return (
     <div>
-      <img onChange ={(event => { setImg(event.currentTarget.value);}) src={meme.blank} />
+      {imgs.map((img) => (
+        <img src={img.template} />
+      ))}
     </div>
   );
 }

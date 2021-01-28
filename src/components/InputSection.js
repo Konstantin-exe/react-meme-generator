@@ -3,8 +3,11 @@ import axios from 'axios';
 
 export default function InputSection() {
   const [memes, setMemes] = useState([]);
+  const [img, setImg] = useState('aag');
+  const [top, setTop] = useState('create_your');
+  const [bot, setBot] = useState('own_meme');
 
-  // const [top, setTop] = useState('');
+  const memeImg = `https://api.memegen.link/images/${img}/${top}/${bot}`;
 
   useEffect(() => {
     axios
@@ -20,22 +23,42 @@ export default function InputSection() {
 
   return (
     <div>
-      <select>
+      <img src={memeImg} alt={memeImg.name} />
+      <select
+        id="selectImg"
+        onChange={(event) => {
+          const imgSelect = document.getElementById('selectImg');
+          const selectedValue = imgSelect.value;
+          setImg(selectedValue);
+          // console.log(memeImg);
+        }}
+      >
         {memes.map((meme) => (
-          <option value={meme.key}>{meme.name}</option>
+          <option key={meme.key} value={meme.key}>
+            {meme.name}
+          </option>
         ))}
       </select>
+
+      <label htmlFor="selectTop">TOP</label>
+      <input
+        id="selectTop"
+        onChange={(event) => {
+          const topSelect = document.getElementById('selectTop');
+          const selectedTop = topSelect.value.replaceAll(' ', '_');
+          setTop(selectedTop);
+        }}
+      />
+
+      <label htmlFor="selectBot">BOTTOM</label>
+      <input
+        id="selectBot"
+        onChange={(event) => {
+          const botSelect = document.getElementById('selectBot');
+          const selectedBot = botSelect.value.replaceAll(' ', '_');
+          setBot(selectedBot);
+        }}
+      />
     </div>
   );
 }
-
-// function getImg(arr) {
-//   let elementArr = [];
-//   for (let element of arr) {
-//     if (element.match('<img[^>]+src\\s*=\\s*[\'"]([^\'"]+)[\'"][^>]*>')) {
-//       elementArr.push(element.split('"')[1]);
-//     }
-//   }
-//   elementArr.length = 10;
-//   return elementArr;
-// }
