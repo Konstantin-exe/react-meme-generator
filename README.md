@@ -1,3 +1,28 @@
+# Meme Generator
+
+Never seen before, never expected and now here:
+
+A MEME GENERATOR - but with a twist - you can't upload your own img (yet)! Because I simply had no time to code that!
+BUT you can edit the top and bottom text on the image!
+
+_Over 140_ memes are waiting for you to get explored!
+
+## Usage
+
+Simply choose the available images from the dropdown menu and add your top and bottom text.
+
+If you want to download and share the meme with your friends hit the download-button. It will automatically download the .jpg file to your Download-Directory.
+
+> Whoever reads that: YOU ARE BEAUTIFUL <3 <
+
+## Modules
+
+AXIOS
+
+```bash
+yarn add axios
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +93,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Follow me on Twitter!
+
+https://twitter.com/KonstantinMlln1
