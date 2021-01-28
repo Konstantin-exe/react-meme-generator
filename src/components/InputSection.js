@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Button from './Button';
 
-export default function InputSection() {
+export default function InputSection(props) {
   const [memes, setMemes] = useState([]);
   const [img, setImg] = useState('aag');
   const [top, setTop] = useState('create_your');
@@ -40,7 +41,9 @@ export default function InputSection() {
         ))}
       </select>
 
-      <label htmlFor="selectTop">TOP</label>
+      <label className="form_label" htmlFor="selectTop">
+        TOP TEXT
+      </label>
       <input
         id="selectTop"
         onChange={(event) => {
@@ -50,7 +53,9 @@ export default function InputSection() {
         }}
       />
 
-      <label htmlFor="selectBot">BOTTOM</label>
+      <label className="form_label" htmlFor="selectBot">
+        BOTTOM TEXT
+      </label>
       <input
         id="selectBot"
         onChange={(event) => {
@@ -59,6 +64,9 @@ export default function InputSection() {
           setBot(selectedBot);
         }}
       />
+
+      <br />
+      <Button memeImg={memeImg} />
     </div>
   );
 }
