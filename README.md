@@ -7,13 +7,20 @@ BUT you can edit the top and bottom text on the image!
 
 _Over 140_ memes are waiting for you to get explored!
 
+![Screenshot 2021-01-28 at 18 21 50](https://user-images.githubusercontent.com/70595672/106175252-2f362b80-6196-11eb-8806-c9424208afff.png)
+![Screenshot 2021-01-28 at 18 22 47](https://user-images.githubusercontent.com/70595672/106175282-3b21ed80-6196-11eb-9f82-f6653c80c824.png)
+
+
 ## Usage
 
 Simply choose the available images from the dropdown menu and add your top and bottom text.
 
 If you want to download and share the meme with your friends hit the download-button. It will automatically download the .jpg file to your Download-Directory.
 
+
+![Screenshot 2021-01-28 at 18 21 57](https://user-images.githubusercontent.com/70595672/106175272-378e6680-6196-11eb-8ac1-b8470c71b682.png)
 > Whoever reads that: YOU ARE BEAUTIFUL <3 <
+
 
 ## Modules
 
