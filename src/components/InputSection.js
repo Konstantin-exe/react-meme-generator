@@ -35,7 +35,7 @@ export default function InputSection(props) {
         }}
       >
         {memes.map((meme) => (
-          <option key={meme.key} value={meme.key}>
+          <option key={meme.id} value={meme.id}>
             {meme.name}
           </option>
         ))}
